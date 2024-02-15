@@ -10,6 +10,7 @@ public abstract class ShootableGameObject : MonoBehaviour
     protected LayerMask damageMask;
     protected LayerMask environmentMask;
 
+    // This is hooked into by the object which instantiates the projectile
     public delegate void CollisionEvent(ShootableGameObject shotObject, GameObject hitObject, Vector2 _shootPosition, Vector2 hitPosition);
 
     public event CollisionEvent OnCollision;
